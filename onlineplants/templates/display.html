@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+      {% block display %}
+
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Title</title>-->
+<!--</head>-->
+<!--<body>-->
+<div class="row">
+    {% for pla in plantsd %}
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card">
+      <div class="card-body">
+          <body>
+<img src="{{ pla.pimage.url }}" width="500" height="300" />
+</body>
+        <h5 class="card-title">{{ pla.pname }}<h5/>
+        <p class="card-text">
+						{{ pla.pdetail }}
+            <p/>
+<form method="post" action="{% url 'addtocart' singleid=pla.id %}">
+     <button  type="submit" class="btn btn-primary">add to cart</buttonclass></button>
+    {% csrf_token %}
+</form>
+
+      </div>
+    </div>
+  </div>
+
+
+
+{% endfor %}
+{% endblock %}
+<!--</body>-->
+<!--</html>-->

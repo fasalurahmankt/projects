@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+{% extends 'index.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ {% block about %}
+             <div id="plant" class="plants">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12 ">
+                  <div class="titlepage">
+                     <h2>Our Wonderful plants</h2>
+<!--                     <span>looking at its layout. The point of using Lorem Ipsumletters, as opposed to usingl</span>-->
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div class="container">
+            <div class="row">
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="{% static 'images/landscape.jpg' %}" alt="img"/></figure>
+                     <h3> landscaping</h3>
+                     <p>Natural landscapes meet man’s basic requirements of water, air and soil that are useful for human survival. These are also necessary for the survival of other living creatures that need sun, air, light, water and land to survive.
+
+But humans have evolved their own systems for survival with systems like terraced farming, fruit farming, partially-settled agriculture, livestock farming, tourism, collection of wild fruits, dependence on forest products, fishing, and similar other livelihood options. </p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="{% static 'images/plant.jpg' %}" alt="img"/></figure>
+                     <h3>  plants </h3>
+                     <p>Plants are living organisms that play an important role in our lives. They belong to the Plantae kingdom as per science. The study of plants and their characteristics is known as Botany. Plants and trees are very important in our lives. Directly or indirectly, plants are connected with our lives, and we both are interdependent on each other. Plants provide us with various fruits, vegetables, oxygen, etc. We help them with carbon dioxide. Plants help in maintaining the ecosystem. Growing a plant is not so easy. It needs a lot of care for a plant to grow into a huge tree or a fully grown plant.</p>
+                  </div>
+               </div>
+               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                  <div class="plants-box">
+                     <figure><img src="{% static 'images/accessories(12).jpg' %}" alt="img"/></figure>
+                     <h3> acessories</h3>
+                     <p>Forest gardening, a forest-based food production system, is the world's oldest form of gardening.[2] Forest gardens originated in prehistoric times along jungle-clad river banks and in the wet foothills of monsoon regions. In the gradual process of families improving their immediate environment, useful tree and vine species were identified, protected and improved while undesirable species were eliminated. Eventually foreign species were also selected and incorporated into the gardens.[3]</p>
+                  </div>
+               </div>
+<!--               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">-->
+<!--                  <div class="plants-box">-->
+<!--                     <figure><img src="{% static '/plant1.jpg' %}" alt="img"/></figure>-->
+<!--                     <h3> Floral Vibrant</h3>-->
+<!--                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">-->
+<!--                  <div class="plants-box">-->
+<!--                     <figure><img src="{% static 'images/plant2.jpg' %}" alt="img"/></figure>-->
+<!--                     <h3> Floral Vibrant</h3>-->
+<!--                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">-->
+<!--                  <div class="plants-box">-->
+<!--                     <figure><img src="{% static 'images/plant3.jpg' %}" alt="img"/></figure>-->
+<!--                     <h3> Floral Vibrant</h3>-->
+<!--                     <p>It is a long established fact that a reader will be distracted by the readable content of a page   when looking at its layout. The point of using Lorem Ipsumletters, as opposed to using</p>-->
+<!--                  </div>-->
+               </div>
+            </div>
+         </div>
+      </div>
+       end plant
+
+      {% endblock %}
+</body>
+</html>

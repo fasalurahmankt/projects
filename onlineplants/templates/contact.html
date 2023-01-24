@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+{% extends 'index.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ {% block contact %}
+<div class="row">-->
+               <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 paddimg-right">
+                  <div class="row">
+                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+<!--                        <form>-->
+<!--                           <div class="row">-->
+<!--                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">-->
+<!--                                 <input class="form-control" placeholder="Name" type="text" name="Name">-->
+<!--                              </div>-->
+<!--                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">-->
+<!--                                 <input class="form-control" placeholder="Email" type="text" name="Email">-->
+<!--                              </div>-->
+<!--                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">-->
+<!--                                 <input class="form-control" placeholder="Phone" type="text" name="Phone">-->
+<!--                              </div>-->
+<!--                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">-->
+<!--                                 <textarea class="textarea>" placeholder="Message" type="text" name="Message"></textarea>-->
+<!--                              </div>-->
+<!--                              <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">-->
+<!--                                 <a href="#">Read More</a>-->
+<!--                              </div>-->
+<!--                           </div>-->
+<!--                        </form>-->
+<!--                     </div>-->
+<!--                     <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">-->
+<!--                        <div class="map_section">-->
+<!--                           <figure><img src="{% static 'images/map.jpg' %}"></figure>-->
+<!--                        </div>-->
+<!--                     </div>-->
+<!--                  </div>-->
+<!--               </div>-->
+<!--               <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 paddimg-left">-->
+<!--                  <div class="Nursery-img">-->
+<!--                     <figure>-->
+<!--                        <img src="{% static 'images/contactimg.jpg' %}" alt="img"/>-->
+<!--                        <div class="text-box">-->
+<!--                           <h3>Best Green Nursery</h3>-->
+<!--                        </div>-->
+<!--                     </figure>-->
+<!--                  </div>-->
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- end contact -->
+      <!-- footer -->
+-      <footer>-->
+         <div id="contact" class="footer">
+            <div class="container">
+               <div class="row pdn-top-30">
+                  <div class="col-md-12 ">
+                     <div class="footer-box">
+                        <div class="headinga">
+                           <h3>Address</h3>
+                           <span> greeno plants</span>
+                            <p>north paravoor</p>
+                            <p>kerala</p>
+                           <p>(+91 9447963979)</p>
+                        </div>
+                        <ul class="location_icon">
+                           <li> <a href="https://www.facebook.com/greensnursery56/"><img src="{% static 'icon/facebook.png' %}"></a></li>
+                           <li> <a href="#"><img src="{% static 'icon/Twitter.png' %}"></a></li>
+                           <li> <a href="#"><img src="{% static 'icon/linkedin.png' %}"></a></li>
+                           <li> <a href="#"><img src="{% static 'icon/instagram.png' %}"></a></li>
+                        </ul>
+                         <style>
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+   text-align: center;
+}
+* {
+   box-sizing: border-box;
+}
+form {
+   padding: 16px;
+   max-width: 800px;
+   margin-left: 20%;
+   background-color: rgb(255, 254, 195);
+}
+input[type=text], input[type=password] {
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+}
+.registerbtn {
+   background-color: #4CAF50;
+   color: white;
+   padding: 16px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
+}
+.registerbtn:hover {
+   opacity: 1;
+}
+a {
+   color: dodgerblue;
+   text-decoration: none;
+}
+.signin {
+   background-color: #f1f1f1;
+   text-align: center;
+}
+@media (max-width: 800px) {
+   form {
+      width: 100%;
+      margin-left: 0px;
+   }
+}
+</style>
+<h1>CONTACT US</h1>
+<form method="post" action="{% url 'savecontact' %}">
+    {% csrf_token %}
+<label ><b>NAME</b></label>
+<input type="text" placeholder="Enter NAME" name="name" required>
+
+<label ><b>MOBILE</b></label>
+<input type="tel" placeholder="Enter number" name="num" required>
+     <br/> <br/>
+<label ADRESS ><b> MESSAGE </b></label>
+<input type="password" placeholder="ENTER message" name="address" required>
+<hr>
+
+
+      <button type="submit" class="registerbtn">enquir now</button>
+
+<!--<div class="signin">-->
+<!--<p>Already have an account? <a href="{% url 'sellerloginpage' %}"></a>.</p>-->
+<!--</div>-->
+</form>
+<!--                        <div class="menu-bottom">-->
+<!--                           <ul class="link">-->
+<!--                              <li> <a href="#">Home</a></li>-->
+<!--                              <li> <a href="#">About</a></li>-->
+<!--                              <li> <a href="#"> Plant</a></li>-->
+<!--                              <li> <a href="#">Gallery</a></li>-->
+<!--                              <li> <a href="#"> Contact us</a></li>-->
+<!--                           </ul>-->
+<!--                        </div>-->
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="copyright">
+               <div class="container">
+                  <p>Copyright 2019 All Rights Reserved Design By  <a href="https://html.design/">Free Html Templates</a></p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      {% endblock %}
+</body>
+</html>

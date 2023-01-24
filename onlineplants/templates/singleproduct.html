@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<h2>cart</h2>
+<table>
+  <tr>
+    <th>product name</th>
+    <th>price</th>
+    <th>quantity</th>
+       <th>image</th>
+       <th>total</th>
+<!--       <th>total</th>-->
+  </tr>
+  <tr>
+    {% for p in splants %}
+    <td>{{ p.pname  }}</td>
+    <td> <p id="price"> {{ p.pprice  }}</p>
+    </td>
+    <td> <input  type="number" min="1" max="100" id="quantity"></td>
+    <td> <img src="{{ p.pimage.url  }}" width="100" height="100"></td>
+    <td> <p id="total"></p></td>
+
+    {% endfor %}
+  </tr>
+
+</table>
+
+</body>
+<!--<script https://code.jquery.com/jquery-3.6.3.min.js ></script>-->
+<!--<script>-->
+<!--  n=document.getelementById("quantity");-->
+<!--  p=document.getelementById("pprice");-->
+<!--  total=n*p;-->
+<!--  document.getelementById("total").innerHTML;-->
+
+
+<!--</script>-->
+<script type="text/javascript" >
+  <script>
+   function displayName() {
+      var originalName = document.getElementById("txtInputData").value;
+      document.getElementById("show_name") = "Your Name is :" + originalName;
+   }
+</script>
+
+</script>
+</html>
+

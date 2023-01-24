@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+   text-align: center;
+}
+* {
+   box-sizing: border-box;
+}
+form {
+   padding: 16px;
+   max-width: 800px;
+   margin-left: 20%;
+   background-color: rgb(255, 254, 195);
+}
+input[type=text], input[type=password] {
+   width: 100%;
+   padding: 15px;
+   margin: 5px 0 22px 0;
+   display: inline-block;
+   border: none;
+   background: #f1f1f1;
+}
+input[type=text]:focus, input[type=password]:focus {
+   background-color: #ddd;
+   outline: none;
+}
+hr {
+   border: 1px solid #f1f1f1;
+   margin-bottom: 25px;
+}
+.registerbtn {
+   background-color: #4CAF50;
+   color: white;
+   padding: 16px 20px;
+   margin: 8px 0;
+   border: none;
+   cursor: pointer;
+   width: 100%;
+   opacity: 0.9;
+}
+.registerbtn:hover {
+   opacity: 1;
+}
+a {
+   color: dodgerblue;
+   text-decoration: none;
+}
+.signin {
+   background-color: #f1f1f1;
+   text-align: center;
+}
+@media (max-width: 800px) {
+   form {
+      width: 100%;
+      margin-left: 0px;
+   }
+}
+</style>
+</head>
+<body>
+<form method="post" action="{% url 'saveplantdetail' %}" enctype="multipart/form-data">
+    {% csrf_token %}
+<label ><b> plant name</b></label>
+<input type="text" placeholder="Enter NAME" name="hpname" required>
+<label ><b>enter plant description</b></label>
+<input type="text" placeholder="Enter DETAILS" name="hpdetail" required>
+
+    <label ><b>enter sellercode </b></label>
+<input type="text" placeholder="Enter CODE" name="sellercode" required>
+<label ><b> price </b></label>
+<input type="number" min="10" max="10000" step="10" placeholder="ENTER PRICE" name="hpprice" required>
+    <label><b> IMAGE</b></label>
+<input type="file" placeholder="upload image" name="hpimage" required>
+<hr>
+
+
+      <button type="submit" class="registerbtn">submit</button>
+
+</div>
+</div>
+</form>
+</body>
+</html>
