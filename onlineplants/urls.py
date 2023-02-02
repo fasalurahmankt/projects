@@ -12,6 +12,8 @@ urlpatterns = [
     path('registration',views.registration,name="registration"),
     # path('userlogin',views.userlogin,name="userlogin"),
     path('savecontact',views.savecontact,name="savecontact"),
+    path('search',views.search,name="search"),
+
     path('displayplantsforsale',views.displayplantsforsale,name="displayplantsforsale"),
 
 

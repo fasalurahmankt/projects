@@ -19,4 +19,6 @@ urlpatterns = [
     path('editproduct<int:plantid>',views.editproduct,name="editproduct"),
     path('displayseller',views.displayseller,name="displayseller"),
 
+    path('search', views.search, name="search"),
+
 ]

@@ -66,3 +66,13 @@ def displayplantsforsale(request):
 def updateproductpage(request):
     plantsu=plantdetail.objects.all()
     return render(request,'updateproduct.html',{'plantsu':plantsu})
+def search(request):
+    if "search" in request.GET:
+        search=request.GET["search"]
+        seplants=plantdetail.objects.filter(pnamecontains=search)
+    else:
+        seplants = plantdetail.objects.all()
+    context={
+        'seplants':seplants
+    }
+    return render(request,'sdisplay.html',context)

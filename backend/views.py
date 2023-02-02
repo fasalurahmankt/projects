@@ -67,6 +67,7 @@ def updateproductpage(request,plantid):
     plants = plantdetail.objects.get(id=plantid)
     return render(request,'cred.html',{'plants':plants})
 def displayproducts(request):
+
     return render(request,'display.html')
 def editproduct(request,plantid):
     plantsid = plantdetail.objects.get(id=plantid)
@@ -85,3 +86,11 @@ def displayseller(request):
             'code':code
        }
        return render(request,'displayseller.html',context)
+
+
+def search(request):
+    code = plantdetail.objects.all().order_by('pname').values()
+    context = {
+        'pname': code
+    }
+    return render(request, 'displayseller.html', context)
